@@ -10,7 +10,6 @@
  int main( void ) {
 
     // define and initialise variables for the problem data 
-    // int salary;
     float salary,th_salary,ni,tax,a,b,c;
 
     salary = 36250; 
@@ -22,20 +21,22 @@
     printf("Salary £%.2f\n",salary);
     printf("NI contribution £%.2f\n",a);
     b=salary-a;
+
+    // checking condition
+    
     if (b>12500) {
-       c=tax*b;
+       float d=b-12500;
+       c=tax*d;
        printf("Tax contribution £%.2f\n",c);
        th_salary=b-c;
     }
     else {
       th_salary=b;
     }
-    printf("Take home salary £ %.2f\n",th_salary);
+
+    // printing the final result
+
+    printf("Take home salary £%.2f\n",th_salary);
 
     return 0;
  }
- // Use only these print statement with appropriate formatting and variable names
-    //printf("Salary £...",var_name);
-    //printf("NI contribution £...",var_name);
-    //printf("Tax contribution £...",var_name);
-    //printf("Take home salary £...",var_name);
